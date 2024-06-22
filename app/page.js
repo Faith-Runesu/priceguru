@@ -1,5 +1,5 @@
 import HeroCarousel from '@/components/HeroCarousel'
-import Searchbar from '@/components/SearchBar'
+import SearchBar from '@/components/SearchBar'
 
 const HomePage = () => {
   return (
@@ -15,7 +15,7 @@ const HomePage = () => {
           <p className='mt-6'>
             Price comparison for tech and gadgets made easy, start saving with us today
           </p>
-          <Searchbar />
+          <SearchBar />
         </div>
         <HeroCarousel/>
       </div>
