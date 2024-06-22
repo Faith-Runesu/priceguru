@@ -1,6 +1,5 @@
-import HeroCarousel from '@/components/Herocarousel'
-import Searchbar from '@/components/Searchbar'
-import React from 'react'
+import HeroCarousel from '@/components/HeroCarousel'
+import Searchbar from '@/components/SearchBar'
 
 const HomePage = () => {
   return (

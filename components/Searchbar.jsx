@@ -5,7 +5,7 @@ import React, { FormEvent, useState } from 'react'
 import { useSate } from 'react'
 
 
-const Searchbar = () => {
+const SearchBar = () => {
 
   const [searchPrompt, setSearchPrompt] = useState('');
   const [isLoading, setIsLoading] = useState(false);
@@ -42,4 +42,4 @@ const Searchbar = () => {
   )
 }
 
-export default Searchbar
+export default SearchBar;
