@@ -1,40 +1,43 @@
-"use client"
+"use client";
 
-import React from 'react'
+import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
-import Image from 'next/image';
+import { Carousel } from "react-responsive-carousel";
+import Image from "next/image";
 
 const carouselImages = [
-    {imgUrl: '/assets/images/image1.png', alt: 'car-1'},
-    {imgUrl: '/assets/images/image2.png', alt: 'car-2'},
-    {imgUrl: '/assets/images/image3.png', alt: 'car-3'},
-    {imgUrl: '/assets/images/image4.png', alt: 'car-4'},
-    {imgUrl: '/assets/images/image5.png', alt: 'car-5'},
-]
+  { imgUrl: "/assets/img-1.png", alt: "img-1" },
+  { imgUrl: "/assets/img-2.png", alt: "img-2" },
+  { imgUrl: "/assets/img-3.jpg", alt: "img-3" },
+  { imgUrl: "/assets/img-4.jpg", alt: "img-4" },
+  { imgUrl: "/assets/img-5.jpg", alt: "img-5" },
+  { imgUrl: "/assets/img-6.jpg", alt: "img-6" },
+];
 const HeroCarousel = () => {
   return (
-    <div className='hero-carousel'>
-        <Carousel 
+    <div className="hero-carousel">
+      <Carousel
         showThumbs={false}
         autoPlay
         infiniteLoop
         interval={3000}
         showArrows={false}
-        showStatus={false}>
-           {carouselImages.map((image) => (
-            <Image 
+        showStatus={false}
+        className="w-full h-[200px]"
+      >
+        {carouselImages.map((image) => (
+          <Image
             src={image.imgUrl}
             alt={image.alt}
             width={484}
             height={484}
-            className='object-contain'
+            className="object-contain w-fit h-fit"
             key={image.alt}
-            />
-           ))}
-        </Carousel>
+          />
+        ))}
+      </Carousel>
     </div>
-  )
-}
+  );
+};
 
-export default HeroCarousel
+export default HeroCarousel;
