@@ -1,8 +1,7 @@
 "use client"
 
 import { scrape } from '@/lib/actions';
-import React, { FormEvent, useState } from 'react'
-import { useSate } from 'react'
+import { useState } from 'react';
 
 
 const SearchBar = () => {

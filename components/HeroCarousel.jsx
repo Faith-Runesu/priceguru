@@ -15,7 +15,7 @@ const carouselImages = [
 ];
 const HeroCarousel = () => {
   return (
-    <div className="hero-carousel">
+    <div className="hero-carousel h-[300px] ">
       <Carousel
         showThumbs={false}
         autoPlay
@@ -29,9 +29,9 @@ const HeroCarousel = () => {
           <Image
             src={image.imgUrl}
             alt={image.alt}
-            width={484}
-            height={484}
-            className="object-contain w-fit h-fit"
+            width={300}
+            height={300}
+            className="w-[80%] h-[350px] rounded-lg"
             key={image.alt}
           />
         ))}
