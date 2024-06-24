@@ -2,7 +2,7 @@
 import { useTypewriter } from "react-simple-typewriter";
 
 const Header = () => {
-  const words = ["For", "the", "right", "prices,", "trust", "the", "Guru"];
+  const words = ["For", "the", "right", "prices,", "trust", "the", "Guru."];
   const fullSentence = words.join(" ");
 
   const [text] = useTypewriter({
