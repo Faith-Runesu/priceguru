@@ -1,18 +1,28 @@
+"use client";
+import { useRouter } from "next/navigation";
 import "./styles.css";
 
 const page = () => {
+  const router = useRouter();
   return (
-    <div className="w-full  flex ">
-      <div className="w-1/2  flex items-center justify-center flex-col ">
+    <div className="w-full  flex max-md:flex-col ">
+      <div className="md:w-1/2  flex items-center justify-center flex-col max-md:py-16">
         <div className="mb-8 flex items-center justify-center flex-col">
-          <h1 className="text-6xl font-bold">Find the Best Deals, </h1>
-          <h1 className=" text-3xl">Every Time.</h1>
+          <h1 className="text-6xl max-md:text-3xl font-bold flex text-center">
+            Find the Best Deals,{" "}
+          </h1>
+          <h1 className=" text-3xl max-md:text-xl">Every Time.</h1>
         </div>
-        <button className="bg-pink-200 py-5 px-12 rounded-full">
+        <button
+          className="bg-pink-200 py-5 px-12 rounded-full hover:bg-pink-100"
+          onClick={() => {
+            router.push("/");
+          }}
+        >
           Get started
         </button>
       </div>
-      <div className="w-1/2 h-full bgGradient bg-opacity-20 flex items-center justify-center p-16">
+      <div className="md:w-1/2 h-full bgGradient bg-opacity-20 flex items-center justify-center p-10 lg:p-16">
         <div className="p-8 bg-white bg-opacity-70 rounded-lg shadow-lg">
           <h2 className="text-2xl font-bold mb-4">Why Choose Us?</h2>
           <ul className="space-y-4">
