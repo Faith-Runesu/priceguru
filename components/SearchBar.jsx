@@ -1,5 +1,6 @@
 "use client";
 
+import { scrape } from "@/lib/actions";
 import { API } from "@/services/api";
 import { useState } from "react";
 
@@ -10,10 +11,13 @@ const SearchBar = () => {
   const submit = async (event) => {
     setIsLoading(true);
     event.preventDefault();
-    const response = await API.post("/scrapper", { searchText: searchPrompt });
+    console.log('click');
+    const response = scrape(searchPrompt);
+    //console.log(response);
+    //const response = await API.post("/scrapper", { searchText: searchPrompt });
 
     if(response.ok) {
-      // handle the successful response 
+      console.log(response.data);      
 
     }else if (response.error) {
       // handle the error 

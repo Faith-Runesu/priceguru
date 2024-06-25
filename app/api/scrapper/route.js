@@ -1,13 +1,18 @@
+import { scrape } from "@/lib/actions";
 import { NextResponse } from "next/server";
 
 export const POST = async (request) => {
+  
+  console.log(request.body);
+  console.log("ppppppppp")
+  
+  const { searchText: productName } = request.body;
+  console.log('------');
+  console.log(productName); 
+  const result = await scrape(productName);
 
-  const { productName } = request.body;
- 
+  const response = {data: result};
 
-  const response = {
-
-  }
 
   return NextResponse.json(response);
 };
