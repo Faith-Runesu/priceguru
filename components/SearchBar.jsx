@@ -1,6 +1,5 @@
 "use client";
 
-import { scrape } from "@/lib/actions";
 import { API } from "@/services/api";
 import { useState } from "react";
 
@@ -9,21 +8,24 @@ const SearchBar = () => {
   const [isLoading, setIsLoading] = useState(false);
 
   const submit = async (event) => {
-    setIsLoading(true);
     event.preventDefault();
-    console.log('click');
-    const response = scrape(searchPrompt);
-    //console.log(response);
-    //const response = await API.post("/scrapper", { searchText: searchPrompt });
+    setIsLoading(true);
 
-    if(response.ok) {
-      console.log(response.data);      
+    try {
+      // request data object to the api
+      const requestData = {
+        searchText: searchPrompt,
+      };
 
-    }else if (response.error) {
-      // handle the error 
+      const response = await API.post("/scrapper/", requestData);
+      // response from the server
+      console.log(response);
+
+      setIsLoading(false);
+    } catch (error) {
+      setIsLoading(false);
+      alert("An error occurred. Please try again later.");
     }
-
-    setIsLoading(false);
   };
 
   return (
