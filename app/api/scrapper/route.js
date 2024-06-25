@@ -7,8 +7,6 @@ export const POST = async (request) => {
 
   const productName = body.searchText;
 
-  console.log(productName);
-
   const result = await scrape(productName);
 
   const response = { data: result };
