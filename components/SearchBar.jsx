@@ -3,7 +3,7 @@
 import { API } from "@/services/api";
 import { useState } from "react";
 
-const SearchBar = () => {
+const SearchBar = ( {onSearch} ) => {
   const [searchPrompt, setSearchPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -19,12 +19,13 @@ const SearchBar = () => {
 
       const response = await API.post("/scrapper/", requestData);
       // response from the server
-      console.log(response);
-
+      //console.log(response.data);
+      onSearch(response.data);
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
-      alert("An error occurred. Please try again later.");
+      console.log(error.message);
+      alert(error.message);
     }
   };
 
