@@ -1,9 +1,27 @@
 "use client"
 import React from 'react';
+import { API } from "@/services/api";
 import Link from "next/link";
 import { FaExternalLinkAlt } from 'react-icons/fa'; // Importing an icon for external links
 
+async function onButtonClick(productObj) {
+  const userEmail = window.prompt("Please enter your email to track this product:");
+  if (userEmail !== null) {
+    const requestData = {
+      email: userEmail,
+      product: productObj,
+    };
+
+    const response = await API.post("/tracker/", requestData);
+    console.log(response);
+
+  } else {
+    
+  }
+}
+
 const ProductCards = ({ products }) => {
+
   return (
     <div className="container mx-auto px-4">
       <div className="grid gap-6 mt-12 md:grid-cols-2 lg:grid-cols-3">
@@ -25,7 +43,7 @@ const ProductCards = ({ products }) => {
                   <span>Goto site</span>
                   <FaExternalLinkAlt className="ml-1" />
                 </Link>
-                <button className="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+                <button type="button" onClick={() => onButtonClick(product)} className="ml-4 inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md shadow-sm text-white bg-blue-500 hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
                 Track
                 </button>
               </div>

@@ -8,6 +8,10 @@ import { useState } from "react";
 
 const HomePage = () => {
   const [products, setProducts] = useState([]);
+  const [isModalOpen, setIsModalOpen] = useState(false);
+
+  const toggleModal = () => setIsModalOpen(!isModalOpen);
+
   const handleSearch = (data) => {
     setProducts(data);
   }
@@ -21,7 +25,7 @@ const HomePage = () => {
         </div>
         <HeroCarousel />
       </div>
-      <ProductCards products={products} />
+      <ProductCards products={products} onButtonClick={toggleModal} />
     </section>
   );
 };
