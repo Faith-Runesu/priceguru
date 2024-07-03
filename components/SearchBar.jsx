@@ -38,9 +38,11 @@ const SearchBar = ( {onSearch} ) => {
           onChange={(e) => setSearchPrompt(e.target.value)}
           placeholder="Enter product name"
           className="searchbar-input"
-          disabled={isLoading}
         />
-        <button type="submit" className="searchbar-btn">
+        <button 
+          type="submit"
+          className="searchbar-btn"
+          disabled={isLoading || searchPrompt.trim() === ''}>
           {isLoading ? "Loading..." : "Search"}
         </button>
       </form>
