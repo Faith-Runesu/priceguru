@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { API } from "@/services/api";
 import Link from "next/link";
 import { FaExternalLinkAlt } from 'react-icons/fa'; // Importing an icon for external links
@@ -15,12 +15,19 @@ async function onButtonClick(productObj) {
     const response = await API.post("/tracker/", requestData);
     console.log(response);
 
-  } else {
-    
-  }
+  };
 }
 
 const ProductCards = ({ products }) => {
+
+  const [initialLoad, setInitialLoad] = useState(true);
+
+  useEffect(() => {
+    if (!initialLoad && (!products.data || products.data.length === 0)) {
+      alert("No products found");
+    }
+    setInitialLoad(false);
+  }, [products]);
 
   return (
     <div className="container mx-auto px-4">
