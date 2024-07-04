@@ -6,7 +6,8 @@ import {FaExternalLinkAlt} from 'react-icons/fa'; // Importing an icon for exter
 
 async function onButtonClick(productObj) {
     const userEmail = window.prompt("Please enter your email to track this product:");
-    if (userEmail !== null) {
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (userEmail !== null && emailRegex.test(userEmail)) {
         const requestData = {
             email: userEmail,
             product: productObj,
