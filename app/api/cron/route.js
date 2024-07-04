@@ -14,9 +14,9 @@ export async function GET() {
         //scrape using tracker
         for (let i = 0; i < trackers.length; i++) {
             let track = trackers[i];
-            if (track.link.startWith("https://everythingzimbabwean.com")) {
+            if (track.link.startsWith("https://everythingzimbabwean.com")) {
                 updated = await scrapedOneFromEverythingZimbabwe(track.link);
-            } else if (track.link.startWith("https://laptopzone.co.zw")) {
+            } else if (track.link.startsWith("https://laptopzone.co.zw")) {
                 updated = await scrapedOneFromLaptopZone(track.link);
             }
             if (updated.price){
