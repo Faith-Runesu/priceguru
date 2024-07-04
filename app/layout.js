@@ -1,26 +1,23 @@
-import { Inter, Space_Grotesk } from "next/font/google";
+import {Quicksand} from "next/font/google";
 import "./globals.css";
 import Navbar from "@/components/Navbar";
 
-const inter = Inter({ subsets: ["latin"] });
-const space_Grotesk = Space_Grotesk({ 
-  subsets: ['latin'],
-  weight: ['300', '400', '500','600', '700']
-  });
+const quicksand = Quicksand({subsets: ["latin"]});
+
 export const metadata = {
-  title: "PriceGuru",
-  description: "Track product prices across multiple websites in Zimbabwe",
+    title: "PriceGuru",
+    description: "Track product prices across multiple websites in Zimbabwe",
 };
 
 export default function RootLayout({children}) {
-  return (
-    <html lang="en">
-      <body className={inter.className}>
+    return (
+        <html lang="en">
+        <body className={quicksand.className}>
         <main className="max-w-10xl mx-auto">
-          <Navbar />
-          {children}
+            <Navbar/>
+            {children}
         </main>
-      </body>
-    </html>
-  );
+        </body>
+        </html>
+    );
 }
