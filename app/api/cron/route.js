@@ -1,6 +1,6 @@
 import Tracker from "@/lib/models/tracker.model";
 import { connectToDB } from "@/lib/mongoose";
-import { emailBody, sendMail } from "../nodemailer";
+import { emailBody, sendMail } from "@/lib/nodemailer";
 import mongoose from "mongoose";
 import { scrapedOneFromLaptopZone } from "@/lib/scrapping_engine_LP";
 import { NextResponse } from "next/server";
