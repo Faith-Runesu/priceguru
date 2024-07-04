@@ -6,7 +6,7 @@ import { scrapedOneFromLaptopZone } from "@/lib/scrapping_engine_LP";
 import { NextResponse } from "next/server";
 
 export async function GET() {
-    updatedProducts = []
+    let updatedProducts = []
     try{
         await connectToDB();
         let updated = false;
