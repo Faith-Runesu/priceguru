@@ -29,7 +29,7 @@ export async function GET() {
                     updatedProducts.push(updated)
                     const emailContent = emailBody(updated, "PRICECHANGE");
                     for (let j = 0; j < track.emails.length; j++) {
-                        await sendMail(emailContent, track.emails[i]);
+                        await sendMail(emailContent, track.emails[j]);
                     }
                 }
 
