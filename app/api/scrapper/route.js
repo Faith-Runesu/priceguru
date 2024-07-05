@@ -1,15 +1,19 @@
-import { scrape } from "@/lib/actions";
-import { NextResponse } from "next/server";
+import {scrape} from "@/lib/actions";
+import {NextResponse} from "next/server";
+
+
+export const maxDuration = 60
+export const dynamic = 'force-dynamic'
 
 export const POST = async (request) => {
-  // parse the incoming body into a JS object
-  const body = await request.json();
+    // parse the incoming body into a JS object
+    const body = await request.json();
 
-  const productName = body.searchText;
+    const productName = body.searchText;
 
-  const result = await scrape(productName);
+    const result = await scrape(productName);
 
-  const response = { data: result };
+    const response = {data: result};
 
-  return NextResponse.json(response);
+    return NextResponse.json(response);
 };
