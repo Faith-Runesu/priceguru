@@ -3,6 +3,7 @@ import { connectToDB } from "@/lib/mongoose";
 import { emailBody, sendMail } from "@/lib/nodemailer";
 import mongoose from "mongoose";
 import { scrapedOneFromLaptopZone } from "@/lib/scrapping_engine_LP";
+import { crapedOneFromEverythingZimbabwe } from "@/lib/scraapping_engine_EZ";
 import { NextResponse } from "next/server";
 
 export async function GET() {
