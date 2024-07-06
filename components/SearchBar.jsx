@@ -24,8 +24,8 @@ const SearchBar = ( {onSearch} ) => {
       setIsLoading(false);
     } catch (error) {
       setIsLoading(false);
-      console.log(error.message);
-      alert(error);
+      console.log(error);
+      alert(error.message);
     }
   };
 
