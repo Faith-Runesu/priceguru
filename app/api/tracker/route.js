@@ -1,7 +1,7 @@
 import { addToTrackList } from "@/lib/actions";
 import { NextResponse } from "next/server";
 
-export const maxDuration = 600;
+export const maxDuration = 60;
 export const dynamic = 'force-dynamic'
 
 export const POST = async (request) => {
