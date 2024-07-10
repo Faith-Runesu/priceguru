@@ -10,7 +10,7 @@ blog posts
 -- (https://medium.com/@aaronndas/creating-priceguru-my-journey-making-my-first-portfolio-project-f1a70a4af92c)
 
 linkedin
--- ()
+-- (https://www.linkedin.com/in/takudzwanashe-ndaveni-9b80b11a8)
 
 
 
