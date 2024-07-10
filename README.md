@@ -1,3 +1,19 @@
+## PriceGuru Portfolio Project
+
+### Introduction
+PriceGuru is a price comparison project which uses web scraping to get the price from websites.
+
+link to the deployed site
+-- (https://priceguru.vercel.app)
+
+blog posts
+-- (https://medium.com/@aaronndas/creating-priceguru-my-journey-making-my-first-portfolio-project-f1a70a4af92c)
+
+linkedin
+-- ()
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
