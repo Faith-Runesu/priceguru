@@ -6,7 +6,7 @@ import { scrapedOneFromLaptopZone } from "@/lib/scrapping_engine_LP";
 import { scrapedOneFromEverythingZimbabwe} from "@/lib/scraapping_engine_EZ"
 import { NextResponse } from "next/server";
 
-export const maxDuration = 60;
+export const maxDuration = 300;
 export const dynamic = 'force-dynamic'
 
 export async function GET() {
