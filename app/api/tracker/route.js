@@ -4,8 +4,8 @@ import { NextResponse } from "next/server";
 export const maxDuration = 300;
 export const dynamic = 'force-dynamic'
 
-export const POST = async (request) => {
-    
+//POST endpoint for tracking objects
+export const POST = async (request) => {  
   const body = await request.json();
 
   const email = body.email;

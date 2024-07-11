@@ -5,8 +5,8 @@ import {NextResponse} from "next/server";
 export const maxDuration = 300;
 export const dynamic = 'force-dynamic';
 
+//POST endpoint for scrapped data 
 export const POST = async (request) => {
-    // parse the incoming body into a JS object
     const body = await request.json();
 
     const productName = body.searchText;

@@ -4,6 +4,7 @@ import {API} from "@/services/api";
 import Link from "next/link";
 import {FaExternalLinkAlt} from 'react-icons/fa'; // Importing an icon for external links
 
+//accept user email from user
 async function onButtonClick(productObj) {
     const userEmail = window.prompt("Please enter your email to track this product:");
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;

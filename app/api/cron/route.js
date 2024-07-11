@@ -8,13 +8,14 @@ import { NextResponse } from "next/server";
 export const maxDuration = 300;
 export const dynamic = 'force-dynamic'
 
+//Get request to get time and initiate CRON jobs
 export async function GET() {
     let updatedProducts = []
     try{
         await connectToDB();
         let updated = false;
         const trackers = await Tracker.find({});
-        //scrape using tracker
+        //scrape using elements from the database
         for (let i = 0; i < trackers.length; i++) {
             let track = trackers[i];
             if (track.link.startsWith("https://everythingzimbabwean.com")) {

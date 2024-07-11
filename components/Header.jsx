@@ -2,6 +2,7 @@
 import {useTypewriter} from "react-simple-typewriter";
 
 const Header = () => {
+    //typewriter effecrt
     const words = ["For", "the", "right", "prices,", "trust", "the", "Guru."];
     const fullSentence = words.join(" ");
 
@@ -10,7 +11,6 @@ const Header = () => {
         loop: 0,
     });
 
-    // Split the text to separate the last word
     const textParts = text.split(" ");
     const lastWord = textParts.pop();
     const sentenceWithoutLastWord = textParts.join(" ");
