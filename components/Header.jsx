@@ -1,8 +1,8 @@
 "use client";
-import {useTypewriter} from "react-simple-typewriter";
+import { useTypewriter } from "react-simple-typewriter";
 
 const Header = () => {
-    //typewriter effecrt
+    //typewriter effect
     const words = ["For", "the", "right", "prices,", "trust", "the", "Guru."];
     const fullSentence = words.join(" ");
 

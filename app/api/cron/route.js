@@ -2,7 +2,7 @@ import Tracker from "@/lib/models/tracker.model";
 import { connectToDB } from "@/lib/mongoose";
 import { emailBody, sendMail } from "@/lib/nodemailer";
 import { scrapedOneFromLaptopZone } from "@/lib/scrapping_engine_LP";
-import { scrapedOneFromEverythingZimbabwe} from "@/lib/scraapping_engine_EZ"
+import { scrapedOneFromEverythingZimbabwe } from "@/lib/scraapping_engine_EZ"
 import { NextResponse } from "next/server";
 
 export const maxDuration = 300;
@@ -11,7 +11,7 @@ export const dynamic = 'force-dynamic'
 //Get request to get time and initiate CRON jobs
 export async function GET() {
     let updatedProducts = []
-    try{
+    try {
         await connectToDB();
         let updated = false;
         const trackers = await Tracker.find({});
@@ -23,7 +23,7 @@ export async function GET() {
             } else if (track.link.startsWith("https://laptopzone.co.zw")) {
                 updated = await scrapedOneFromLaptopZone(track.link);
             }
-            if (updated.price){
+            if (updated.price) {
                 let newTracker = {
                     price: updated.price,
                 }

@@ -1,5 +1,5 @@
-import {scrape} from "@/lib/actions";
-import {NextResponse} from "next/server";
+import { scrape } from "@/lib/actions";
+import { NextResponse } from "next/server";
 
 
 export const maxDuration = 300;
@@ -13,6 +13,6 @@ export const POST = async (request) => {
 
     const result = await scrape(productName);
 
-    const response = {data: result};
+    const response = { data: result };
     return NextResponse.json(response);
 };

@@ -5,7 +5,7 @@ export const maxDuration = 300;
 export const dynamic = 'force-dynamic'
 
 //POST endpoint for tracking objects
-export const POST = async (request) => {  
+export const POST = async (request) => {
   const body = await request.json();
 
   const email = body.email;

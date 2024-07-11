@@ -2,7 +2,7 @@
 import { API } from "@/services/api";
 import { useState } from "react";
 
-const SearchBar = ( {onSearch} ) => {
+const SearchBar = ({ onSearch }) => {
   const [searchPrompt, setSearchPrompt] = useState("");
   const [isLoading, setIsLoading] = useState(false);
 
@@ -38,7 +38,7 @@ const SearchBar = ( {onSearch} ) => {
           placeholder="Enter product name"
           className="searchbar-input"
         />
-        <button 
+        <button
           type="submit"
           className="searchbar-btn"
           disabled={isLoading || searchPrompt.trim() === ''}>
