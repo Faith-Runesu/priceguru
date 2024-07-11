@@ -17,8 +17,9 @@ async function onButtonClick(productObj) {
         const response = await API.post("/tracker/", requestData);
         console.log(response);
 
+    } else {
+        alert("Invalid email address");
     }
-    ;
 }
 
 const ProductCards = ({ products }) => {
