@@ -17,7 +17,11 @@ linkedin
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
+My project, PriceGuru, was born from a personal experience that deeply affected me. A few years ago, I decided to buy a laptop for my studies — a crucial tool for my education and future career. After months of saving and searching online, I found an HP 250 that seemed to fit my needs, priced at $450. Believing it was the best deal I could get, I made the purchase, feeling both excited and accomplished.
 
+However, a week later, my excitement turned into disappointment when I discovered that my teacher had bought the exact same laptop for just $300. He had managed to find a deal that was almost half the price of what I paid. I was heartbroken, not just because of the money I had lost, but also because I realized how my limited ability to find the best price had cost me dearly. With the extra money, I could have bought a better laptop or saved for other essential expenses.
+
+This experience stuck with me and became the driving force behind PriceGuru. I didn’t want anyone else to go through the same frustration and loss that I did. I wanted to create a tool that would help people in Zimbabwe, where every dollar counts, to find the best prices for electronics without the hassle and disappointment I faced.
 First, run the development server:
 
 ```bash
@@ -48,5 +52,15 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 ## Deploy on Vercel
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+## Why PriceGu
+My project, PriceGuru, was born from a personal experience that deeply affected me. A few years ago, I decided to buy a laptop for my studies — a crucial tool for my education and future career. After months of saving and searching online, I found an HP 250 that seemed to fit my needs, priced at $450. Believing it was the best deal I could get, I made the purchase, feeling both excited and accomplished.
+
+However, a week later, my excitement turned into disappointment when I discovered that my teacher had bought the exact same laptop for just $300. He had managed to find a deal that was almost half the price of what I paid. I was heartbroken, not just because of the money I had lost, but also because I realized how my limited ability to find the best price had cost me dearly. With the extra money, I could have bought a better laptop or saved for other essential expenses.
+
+This experience stuck with me and became the driving force behind PriceGuru. I didn’t want anyone else to go through the same frustration and loss that I did. I wanted to create a tool that would help people in Zimbabwe, where every dollar counts, to find the best prices for electronics without the hassle and disappointment I faced.
+
+## Project details
+This project was done in 5 weeks 3 weeks for research and planning and 2 weeks for the actual development, I really enjoyed learning  web scraping in javascript. Disclaimer this was my first Nextjs project. Feel free to contribute. Constructive critisism will be appreciated. 
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
