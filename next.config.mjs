@@ -1,6 +1,6 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-    staticPageGenerationTimeout: 60,
+    staticPageGenerationTimeout: 300,
     crossOrigin: 'anonymous',
 };
     
