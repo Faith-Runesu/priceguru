@@ -14,7 +14,6 @@ export const POST = async (request) => {
   const result = await addToTrackList(product, email);
 
   const response = { data: result };
-
   return NextResponse.json(response);
 };
 

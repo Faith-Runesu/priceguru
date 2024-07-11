@@ -4,6 +4,7 @@ import React from "react";
 import Logo from "../public/logo.png";
 
 const navIcons = [];
+
 const Navbar = () => {
   return (
     <header className="w-full">

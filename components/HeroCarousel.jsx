@@ -13,6 +13,7 @@ const carouselImages = [
   { imgUrl: "/assets/img-5.jpg", alt: "img-5" },
   { imgUrl: "/assets/img-6.jpg", alt: "img-6" },
 ];
+
 const HeroCarousel = () => {
   return (
     <div className="hero-carousel h-[300px] ">
